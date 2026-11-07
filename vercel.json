@@ -1,0 +1,40 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "markgomez.vercel.app"
+        }
+      ],
+      "destination": "https://mark-gomez.vercel.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/Mark-Gomez-CV.pdf",
+      "destination": "https://romemcg.github.io/Mark-Gomez-CV.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/img/:path*",
+      "destination": "https://romemcg.github.io/img/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/logos/:path*",
+      "destination": "https://romemcg.github.io/logos/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/mark-gomez.vcf",
+      "destination": "https://romemcg.github.io/mark-gomez.vcf",
+      "permanent": false
+    }
+  ]
+}
