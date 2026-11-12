@@ -522,6 +522,7 @@ document.querySelectorAll('.cs .page:not(.cover)').forEach(function(pg){var body
 });})();
 
 var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('inview',e.isIntersecting);if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
+document.querySelectorAll('.sfig .vis').forEach(function(v){var sv=v.querySelector('svg');if(!sv)return;var vb=(sv.getAttribute('viewBox')||'').split(/[ ,]+/).map(Number);if(vb.length===4&&vb[2]/vb[3]<1.9){v.style.maxWidth='860px';var c=v.parentNode.querySelector('.cap');if(c)c.style.maxWidth='860px'}});
 document.querySelectorAll('.vis,.hero').forEach(function(e){io.observe(e)});
 var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.note,.strip .s,.phase,.xp,.dl,h1,.quote,.vis').forEach(function(e){e.classList.add('rv');rv.observe(e)});
