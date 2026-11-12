@@ -45,6 +45,24 @@ header .wrap,footer .wrap{max-width:1560px;padding-left:clamp(24px,4vw,64px);pad
 .cs .ctl button:hover{border-color:rgb(var(--accent))}
 .cs .page.cover+.page{border-top:0}
 @media(max-width:860px){.cs .page.cover{grid-template-columns:1fr}.cs .page{padding:44px 20px}}
+
+.cs .sh{max-width:960px;margin:0 0 36px}
+.cs .sh .kick{margin-bottom:12px}
+.cs .sh h1{margin:0 0 16px}
+.cs .sh .lead{margin:0;max-width:none!important}
+.cs .sfig{max-width:1240px;margin:0 auto 40px}
+.cs .sfig .cap{margin-top:12px;max-width:900px}
+.cs .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:24px;align-items:start;margin-top:8px}
+.cs .blk{background:rgb(var(--card)/.72);backdrop-filter:blur(6px);border:1px solid rgb(var(--line)/.1);border-radius:22px;padding:26px 28px;transition:transform .3s,box-shadow .3s,border-color .3s;display:flex;flex-direction:column;gap:10px}
+.cs .blk:hover{transform:translateY(-5px);border-color:rgb(var(--accent)/.55);box-shadow:0 18px 40px -16px rgba(37,99,235,.35)}
+.cs .blk.bare{background:none;border:0;padding:0;backdrop-filter:none;box-shadow:none}
+.cs .blk.bare:hover{transform:none;box-shadow:none}
+.cs .blk.bare>.note{margin:0;font-size:clamp(15px,1.05vw,17px)!important;line-height:1.55}
+.cs .blk .h3{margin:0 0 4px}
+.cs .blk:only-child ul.l{column-count:2;column-gap:48px}.cs .blk:only-child ul.l li{break-inside:avoid}
+.cs .blk:has(> dl),.cs .blk:has(.xp){grid-column:span 2}
+.cs .blk .note{margin-top:8px}
+@media(max-width:860px){.cs .blk:has(> dl),.cs .blk:has(.xp){grid-column:auto}.cs .blk:only-child ul.l{column-count:1}}
 </style></head><body><header class="sticky top-0 z-50 bg-bg/80 backdrop-blur-md"><div class="wrap flex h-16 items-center justify-between"><a aria-label="Mark Gomez, home" class="inline-flex items-baseline whitespace-nowrap" style="font-family:&quot;Playfair Display&quot;, Georgia, serif;font-weight:600;letter-spacing:-0.01em;font-size:1.35rem;line-height:1" href="/">Mark Gomez<span class="text-accent">.</span></a><nav aria-label="Primary" class="hidden items-center gap-1 md:flex"><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/projects/">Projects</a><a aria-current="page" class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 font-semibold text-accent" href="/case-studies/">Case Studies</a><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/career/">Career</a><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/about/">About</a><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/contact/">Contact</a><a class="btn btn-accent ml-2 !px-4 !py-2 !text-sm" href="/career/">Recruiter view</a><div class="ml-2"><button aria-label="Switch to dark mode" class="grid h-10 w-10 place-items-center rounded-full border border-line/20 text-lg hover:bg-ink/10 transition"><span aria-hidden="true">☾</span></button></div></nav><div class="flex items-center gap-2 md:hidden"><button aria-label="Switch to dark mode" class="grid h-10 w-10 place-items-center rounded-full border border-line/20 text-lg hover:bg-ink/10 transition"><span aria-hidden="true">☾</span></button><button aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu" class="grid h-10 w-10 place-items-center rounded-full border border-line/20"><span aria-hidden="true" class="text-lg">☰</span></button></div></div></header><canvas id="bg" aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10"></canvas><main id="main" class="cs"><div class="ctl"><a href="/case-studies/">&larr; All case studies</a><button id="pm" type="button">Pause motion</button></div><!-- PAGE 1 -->
 <section class="page dark cover">
   <div class="hero"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 794" width="720" height="794" font-family="'DM Sans', system-ui, sans-serif"><defs>
@@ -454,6 +472,28 @@ header .wrap,footer .wrap{max-width:1560px;padding-left:clamp(24px,4vw,64px);pad
   <div class="ftr"><span>© 2026 <b>Mark Jerome Gomez</b> | Independent Technical Case Study</span><span>9 / 9</span></div>
 </section>
 </main><footer class="mt-24 bg-tint py-12"><div class="wrap flex flex-col gap-8 md:flex-row md:items-center md:justify-between"><div><a aria-label="Mark Gomez, home" class="inline-flex items-baseline whitespace-nowrap" style="font-family:&quot;Playfair Display&quot;, Georgia, serif;font-weight:600;letter-spacing:-0.01em;font-size:1.7rem;line-height:1" href="/">Mark Gomez<span class="text-accent">.</span></a><p class="mt-1 text-sm text-soft">Technical product manager, AIoT and smart city platforms, based in the UAE.</p></div><nav aria-label="More" class="flex flex-wrap gap-x-5 gap-y-2 text-sm"><a class="text-ink/90 hover:text-accent" href="/projects/">Projects</a><a class="text-ink/90 hover:text-accent" href="/case-studies/">Case studies</a><a class="text-ink/90 hover:text-accent" href="/career/">Career</a><a class="text-ink/90 hover:text-accent" href="/recommendations/">Recommendations</a><a class="text-ink/90 hover:text-accent" href="/about/">About</a><a class="text-ink/90 hover:text-accent" href="/now/">Now</a><a class="text-ink/90 hover:text-accent" href="/contact/">Contact</a></nav><div class="flex gap-2"><a href="https://www.linkedin.com/in/romemcg" aria-label="LinkedIn" class="grid h-10 w-10 place-items-center rounded-full bg-card text-ink shadow-sm transition hover:-translate-y-0.5 hover:text-accent"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a><a href="https://github.com/romemcg" aria-label="GitHub" class="grid h-10 w-10 place-items-center rounded-full bg-card text-ink shadow-sm transition hover:-translate-y-0.5 hover:text-accent"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a><a href="mailto:mjerome.gomez@gmail.com" aria-label="Email" class="grid h-10 w-10 place-items-center rounded-full bg-card text-ink shadow-sm transition hover:-translate-y-0.5 hover:text-accent"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"></path></svg></a></div></div><p class="wrap mt-8 text-xs text-soft">© 2026 Mark Gomez · <!-- -->United Arab Emirates</p></footer><script>document.documentElement.classList.add('js');
+/* regroup layout */
+(function(){function mk(c){var d=document.createElement('div');d.className=c;return d}
+function group(list,host){var cur=null;list.forEach(function(c){var cl=c.classList;
+ if(cl.contains('h3')){cur=mk('blk');host.appendChild(cur);cur.appendChild(c)}
+ else if(cur&&!cl.contains('note')&&!cl.contains('quote')){cur.appendChild(c)}
+ else{cur=null;var b=mk('blk'+((cl.contains('note')||cl.contains('quote'))?' bare':''));b.appendChild(c);host.appendChild(b)}})}
+document.querySelectorAll('.cs .page:not(.cover)').forEach(function(pg){var body=pg.querySelector('.body');if(!body)return;
+ var grid=null;Array.from(body.children).forEach(function(k){var st=k.getAttribute('style')||'';
+  if(!grid&&k.tagName==='DIV'&&/grid-template-columns/.test(st)&&!/repeat/.test(st)&&k.children.length===2&&k.children[0].tagName==='DIV'&&k.children[1].tagName==='DIV')grid=k});
+ if(grid){var L=grid.children[0],R=grid.children[1],head=mk('sh'),fig=mk('sfig'),sg=mk('sgrid'),rest=[],rr=[];
+  Array.from(L.children).forEach(function(c){if(c.classList.contains('kick')||c.tagName==='H1'||c.classList.contains('lead'))head.appendChild(c);else rest.push(c)});
+  Array.from(R.children).forEach(function(c){if(c.classList.contains('vis'))fig.appendChild(c);else if(c.classList.contains('cap')&&fig.querySelector('.vis')&&!fig.querySelector('.cap'))fig.appendChild(c);else rr.push(c)});
+  group(rest,sg);group(rr,sg);
+  if(head.children.length)body.insertBefore(head,grid);
+  if(fig.children.length)body.insertBefore(fig,grid);
+  if(sg.children.length)body.insertBefore(sg,grid);
+  grid.remove()}
+ var sh=null;Array.from(body.children).forEach(function(c){if(c.classList.contains('sh'))return;
+  if(c.classList.contains('kick')||c.tagName==='H1'||c.classList.contains('lead')){if(!sh){sh=mk('sh');body.insertBefore(sh,c)}sh.appendChild(c)}});
+ body.querySelectorAll(':scope > .vis').forEach(function(v){var f=mk('sfig');body.insertBefore(f,v);f.appendChild(v);var n=f.nextElementSibling;if(n&&n.classList.contains('cap'))f.appendChild(n)});
+});})();
+
 var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('inview',e.isIntersecting);if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
 document.querySelectorAll('.vis,.hero').forEach(function(e){io.observe(e)});
 var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{threshold:.1});
