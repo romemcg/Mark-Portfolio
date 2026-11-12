@@ -150,7 +150,18 @@ div[style*="position:absolute"]{position:static !important;margin-top:36px}
 h1.sm{font-size:30px}.lead{max-width:none !important}
 .dl>div{grid-template-columns:26mm 1fr}.dl.wide>div{grid-template-columns:38mm 1fr}
 @media (max-width:860px){[style*="grid-template-columns"]{grid-template-columns:1fr !important}.page.cover{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.cover h1{font-size:34px}.vis svg{min-width:0}}
-</style></head><body><div class="bar" style="background:#fff"><button id="pm">Pause motion</button><a href="case-study.pdf" download>Download PDF</a></div><!-- PAGE 1 -->
+</style></head><body><style>
+.sn{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid #E5E7EB;font-family:'DM Sans',system-ui,sans-serif}
+.sn .in{max-width:1180px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sn .lg{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:1.35rem;color:#0A162E;text-decoration:none}.sn .lg b{color:#2563EB}
+.sn nav{display:flex;gap:4px;flex-wrap:wrap}.sn nav a{padding:8px 12px;border-radius:999px;font-size:14px;color:#0A162E;text-decoration:none}.sn nav a:hover{background:rgba(10,22,46,.08)}
+.sn nav a.on{background:rgba(37,99,235,.12);color:#2563EB}
+.sn #pm{border:1px solid #E5E7EB;background:#fff;border-radius:999px;padding:8px 14px;font:500 13px 'DM Sans',sans-serif;cursor:pointer;color:#0A162E}
+.sf{background:#EEF3FB;padding:40px 20px;margin-top:40px;font-family:'DM Sans',system-ui,sans-serif;text-align:center;color:#0A162E}
+.sf a{color:#0A162E;margin:0 10px;font-size:14px;text-decoration:none}.sf a:hover{color:#2563EB}
+@media(max-width:700px){.sn nav a:not(.on){display:none}.sn nav a.back{display:inline-block}}
+</style>
+<header class="sn"><div class="in"><a class="lg" href="/">Mark Gomez<b>.</b></a><nav aria-label="Primary"><a class="back" href="/case-studies/">&larr; All case studies</a><a href="/projects/">Projects</a><a class="on" href="/case-studies/">Case Studies</a><a href="/career/">Career</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav><button id="pm">Pause motion</button></div></header><!-- PAGE 1 -->
 <section class="page dark cover">
   <div class="hero"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 794" width="720" height="794" font-family="'DM Sans', system-ui, sans-serif"><defs>
 <linearGradient id="h_glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60A5FA" stop-opacity="0.16"/><stop offset="1" stop-color="#60A5FA" stop-opacity="0.04"/></linearGradient>
@@ -565,4 +576,4 @@ const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.note,.strip .s,.phase,.xp,.dl,h1,.quote').forEach(e=>{e.classList.add('rv');rv.observe(e)});
 document.querySelectorAll('.vis').forEach(e=>e.classList.add('rv'));document.querySelectorAll('.vis.rv').forEach(e=>rv.observe(e));
 const pm=document.getElementById('pm');let off=false;pm.onclick=()=>{off=!off;document.body.classList.toggle('paused',off);document.querySelectorAll('svg').forEach(s=>off?s.pauseAnimations():s.unpauseAnimations());pm.textContent=off?'Play motion':'Pause motion'};
-</script></body></html>
+</script><footer class="sf"><div><a href="/">Home</a><a href="/projects/">Projects</a><a href="/case-studies/">Case studies</a><a href="/career/">Career</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></footer></body></html>
