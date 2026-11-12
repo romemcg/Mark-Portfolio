@@ -63,6 +63,31 @@ header .wrap,footer .wrap{max-width:1560px;padding-left:clamp(24px,4vw,64px);pad
 .cs .blk:has(> dl),.cs .blk:has(.xp){grid-column:span 2}
 .cs .blk .note{margin-top:8px}
 @media(max-width:860px){.cs .blk:has(> dl),.cs .blk:has(.xp){grid-column:auto}.cs .blk:only-child ul.l{column-count:1}}
+
+.cs .page{padding-top:44px!important;padding-bottom:44px!important}
+.cs .page.cover{padding-top:36px!important;padding-bottom:36px!important}
+.cs .sh{margin-bottom:22px;max-width:1100px}
+.cs .sh h1{margin-bottom:10px}
+.cs .sfig{max-width:none;margin:0 0 22px}
+.cs .sfig .vis{max-width:1240px;margin:0 auto}
+.cs .sfig .cap{margin:10px auto 0;max-width:1240px}
+.cs .sgrid{display:block;column-count:3;column-gap:20px;margin-top:0}
+.cs .sgrid>.blk{break-inside:avoid;margin-bottom:20px;display:flex}
+.cs .blk{padding:20px 22px;gap:8px;border-radius:18px}
+.cs .blk:has(> dl),.cs .blk:has(.xp){grid-column:auto}
+.cs .blk:only-child{column-span:all}
+.cs .sgrid:has(> .blk:only-child){column-count:1}
+.cs .page+.page{margin-top:0}
+.cs .strip{margin-top:6px}
+@media(max-width:1100px){.cs .sgrid{column-count:2}}
+@media(max-width:700px){.cs .sgrid{column-count:1}}
+
+.cs .sgrid.few{display:grid;column-count:auto;gap:20px;align-items:start}
+.cs .sgrid.few>.blk{margin:0}
+.cs .blk.stack{background:none;border:0;padding:0;backdrop-filter:none;box-shadow:none;display:flex;flex-direction:column;gap:16px}
+.cs .blk.stack:hover{transform:none;box-shadow:none}
+.cs .blk.stack .note{margin:0}
+@media(max-width:860px){.cs .sgrid.few{grid-template-columns:1fr!important}}
 </style></head><body><header class="sticky top-0 z-50 bg-bg/80 backdrop-blur-md"><div class="wrap flex h-16 items-center justify-between"><a aria-label="Mark Gomez, home" class="inline-flex items-baseline whitespace-nowrap" style="font-family:&quot;Playfair Display&quot;, Georgia, serif;font-weight:600;letter-spacing:-0.01em;font-size:1.35rem;line-height:1" href="/">Mark Gomez<span class="text-accent">.</span></a><nav aria-label="Primary" class="hidden items-center gap-1 md:flex"><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/projects/">Projects</a><a aria-current="page" class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 font-semibold text-accent" href="/case-studies/">Case Studies</a><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/career/">Career</a><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/about/">About</a><a class="rounded-full px-3 py-2 text-sm transition hover:bg-ink/10 text-ink/90" href="/contact/">Contact</a><a class="btn btn-accent ml-2 !px-4 !py-2 !text-sm" href="/career/">Recruiter view</a><div class="ml-2"><button aria-label="Switch to dark mode" class="grid h-10 w-10 place-items-center rounded-full border border-line/20 text-lg hover:bg-ink/10 transition"><span aria-hidden="true">☾</span></button></div></nav><div class="flex items-center gap-2 md:hidden"><button aria-label="Switch to dark mode" class="grid h-10 w-10 place-items-center rounded-full border border-line/20 text-lg hover:bg-ink/10 transition"><span aria-hidden="true">☾</span></button><button aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu" class="grid h-10 w-10 place-items-center rounded-full border border-line/20"><span aria-hidden="true" class="text-lg">☰</span></button></div></div></header><canvas id="bg" aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10"></canvas><main id="main" class="cs"><div class="ctl"><a href="/case-studies/">&larr; All case studies</a><button id="pm" type="button">Pause motion</button></div><!-- PAGE 1 -->
 <section class="page dark cover">
   <div class="hero"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 794" width="720" height="794" font-family="'DM Sans', system-ui, sans-serif"><defs>
@@ -485,6 +510,8 @@ document.querySelectorAll('.cs .page:not(.cover)').forEach(function(pg){var body
   Array.from(L.children).forEach(function(c){if(c.classList.contains('kick')||c.tagName==='H1'||c.classList.contains('lead'))head.appendChild(c);else rest.push(c)});
   Array.from(R.children).forEach(function(c){if(c.classList.contains('vis'))fig.appendChild(c);else if(c.classList.contains('cap')&&fig.querySelector('.vis')&&!fig.querySelector('.cap'))fig.appendChild(c);else rr.push(c)});
   group(rest,sg);group(rr,sg);
+  var bs=Array.from(sg.children),stack=null;bs.forEach(function(b){if(b.classList.contains('bare')){if(!stack){stack=mk('blk stack');sg.insertBefore(stack,b)}stack.appendChild(b.firstElementChild);b.remove()}else stack=null});
+  var cnt=sg.children.length;if(cnt<=3){sg.classList.add('few');sg.style.gridTemplateColumns='repeat('+cnt+',1fr)'}
   if(head.children.length)body.insertBefore(head,grid);
   if(fig.children.length)body.insertBefore(fig,grid);
   if(sg.children.length)body.insertBefore(sg,grid);
