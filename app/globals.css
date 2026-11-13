@@ -18,7 +18,7 @@ html { scroll-behavior: smooth; background: rgb(7 14 28); }
 /* Touch reveal (digital twin mask): pointer events keep flowing for horizontal and diagonal drags while vertical scrolling and pinch-zoom stay with the browser. No preventDefault anywhere. */
 html { touch-action: pan-y pinch-zoom; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { background: rgb(var(--bg)); color: rgb(var(--ink)); font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+body { background: transparent; /* html paints the page colour; an opaque body would cover the fixed -z-10 dot and 3D reveal canvases */ color: rgb(var(--ink)); font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; }
 ::selection { background: rgb(var(--accent) / .35); }
 :focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 3px; border-radius: 6px; }
 .skip { position: absolute; left: -999px; top: 8px; z-index: 100; background: rgb(var(--ink)); color: rgb(var(--bg)); padding: 8px 14px; border-radius: 8px; }
