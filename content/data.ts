@@ -2,7 +2,7 @@
 // All public content lives here.
 
 export const site = {
-  url: "https://mark-gomez.vercel.app", // production URL: single constant used for canonical, Open Graph, sitemap and robots
+  url: "https://markgomez.vercel.app", // production URL: single constant used for canonical, Open Graph, sitemap and robots
   name: "Mark Gomez",
   fullName: "Mark Jerome Castillo Gomez",
   seoName: "Mark Jerome Gomez",
