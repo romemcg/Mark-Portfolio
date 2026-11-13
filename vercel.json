@@ -1,6 +1,16 @@
 {
   "framework": null,
-  "installCommand": "npm ci",
+  "installCommand": "npm ci --include=dev",
   "buildCommand": "npm run build",
-  "outputDirectory": "out"
+  "outputDirectory": "out",
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "mark-gomez.vercel.app" }],
+      "destination": "https://markgomez.vercel.app/:path*",
+      "permanent": false
+    }
+  ]
 }

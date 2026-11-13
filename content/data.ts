@@ -22,8 +22,8 @@ export const site = {
 
 // Rotating hero subtitle (components/Hero.tsx cycles through these every 2.6 s). Keep the full sequence.
 export const identity = [
+  "Product manager.",
   "Engineer by training.",
-  "AI product manager.",
   "Builder by curiosity.",
   "Product thinker.",
   "Always evolving.",
@@ -123,7 +123,7 @@ export const roles: Role[] = [
       "Led product development from concept validation through production ramp up.",
       "Coordinated R&D, process engineering, manufacturing, quality and production teams, including teams at Samsung headquarters in South Korea.",
       "Analysed production and quality data to find root causes and drive process improvement.",
-      "Recognised with the Best Practitioner Award, Plating R&D (May 2022) and the Most Improved Process Award (2022).",
+      "Recognised with the Best Practitioner, Most Outstanding Employee (Plating R&D) and Most Improved Process awards.",
     ],
     tools: ["Root cause analysis", "Reliability testing", "Process improvement", "NPI"],
     transferable: ["Systems thinking", "Data informed problem solving", "Shipping when mistakes are costly"],
@@ -869,10 +869,10 @@ export const recruiter = {
   ],
   impactNote: "~ marks approximate estimates. Results were delivered with cross functional teams and vendors, and reflect my contribution to shared outcomes.",
   experience: {
-    terminus: ["Defined enterprise AIoT products and smart city solutions, from PRDs and system blueprints to integration requirements.", "Built predictive maintenance business cases and supported TacOS and IoC digital twin solutions for GCC enterprise and government opportunities."],
+    terminus: ["Owned product definition, roadmap and platform architecture for AIoT and Digital Twin platforms deployed across large scale real estate and infrastructure portfolios in the GCC.", "Produced PRDs, system blueprints and integration flow specifications across device, middleware and application layers, and set technical governance standards for cybersecurity, data integrity and lifecycle maintainability."],
     aldar: ["Delivered connected community platforms across Saadiyat, Mamsha and The Grove with Siemens, ID Cube and Parkonic, including smart parking and building intelligence.", "Created the Smart City Solution Blueprint, a reusable scoring framework for use cases and vendors, applied across three developments."],
     disruptx: ["Promoted from Product Engineer to Product Manager within six months, owning IoT SaaS platforms across the UAE, Saudi Arabia and Oman.", "Drove platform development and device integrations over LoRaWAN, NB-IoT, Sigfox and BLE through structured UAT."],
-    samsung: ["Led electronic component development from concept validation to mass production, working across R&D, quality and Samsung headquarters in South Korea.", "Recognised with the Best Practitioner Award, Plating R&D (May 2022) and the Most Improved Process Award (2022)."],
+    samsung: ["Led electronic component development from concept validation to mass production, working across R&D, quality and Samsung headquarters in South Korea.", "Recognised with the Best Practitioner, Most Outstanding Employee (Plating R&D) and Most Improved Process awards."],
   } as Record<string, string[]>,
   strengths: [
     { group: "Product Strategy and Ownership", items: ["Product Discovery", "Roadmaps", "PRDs", "Backlog Management", "Agile Delivery", "Stakeholder Management"] },
@@ -883,9 +883,9 @@ export const recruiter = {
   ],
   credentials: [
     { group: "Professional Licences", items: ["Registered Electronics Engineer (REE), Philippines", "Registered Electronics Technician (RTech), Philippines"] },
-    { group: "Product and Agile", items: ["Certified Scrum Product Owner (CSPO), Scrum Alliance", "Professional Scrum Product Owner I (PSPO I), Scrum.org", "SAFe Product Owner / Product Manager 6.0, Scaled Agile"] },
-    { group: "AI, Technology and Analytics", items: ["Smart Cities: Management of Smart Urban Infrastructures, EPFL", "Introduction to Large Language Models, PMI", "AI in Product Management, Pendo", "Google Data Analytics Professional Certificate", "Google Cybersecurity Professional Certificate"] },
-    { group: "Professional Development", items: ["PMP Exam Preparation, 35 Contact Hours (training, not a PMP certification)"] },
+    { group: "Product and Agile", items: ["Certified Scrum Product Owner (CSPO), Scrum Alliance, Jun 2026", "Mobile Product Management Certification, UXCam, Jan 2025", "Product Experimentation Micro-Certification, Product School, Feb 2025", "Product Roadmapping, Product School", "Digital Adoption Certificate, Pendo, Mar 2025"] },
+    { group: "AI, Technology and Analytics", items: ["Smart Cities: Management of Smart Urban Infrastructures, EPFL, Sep 2026", "Introduction to Large Language Models, PMI, Jul 2026", "AI in Product Management, Pendo, Feb 2025", "One Million Prompters Certificate, Dubai Future Foundation, Mar 2025", "BI Dashboards with Power BI, Codecademy, Sep 2025"] },
+    { group: "IoT and Delivery", items: ["Certified Solution Specialist in Smart HVAC Management Solutions, Milesight IoT, Jul 2026", "LoRaWAN Academy", "Cisco IoT and Digital Transformation", "PMI Organizational Change"] },
   ],
   docs: {
     cv: { href: "/Mark-Gomez-CV.pdf", title: "Download CV (PDF)", note: "Complete, ATS friendly professional CV" },
