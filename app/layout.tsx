@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: site.seoName, description: site.tagline, images: [`${site.url}/img/og-cover.jpg`] },
   alternates: { canonical: "/" },
   // The site is already dark. Stops Brave Night Mode (Dark Reader) re-theming it: grey page, dark logo tiles, unreadable text.
-  other: { "darkreader-lock": "", "color-scheme": "dark" },
+  other: { "darkreader-lock": "true", "color-scheme": "dark" },
 };
 export const viewport: Viewport = { themeColor: "#070E1C", colorScheme: "dark" };
 
