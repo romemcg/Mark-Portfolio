@@ -874,6 +874,37 @@ export const recruiter = {
     disruptx: ["Promoted from Product Engineer to Product Manager within six months, owning IoT SaaS platforms across the UAE, Saudi Arabia and Oman.", "Drove platform development and device integrations over LoRaWAN, NB-IoT, Sigfox and BLE through structured UAT."],
     samsung: ["Led electronic component development from concept validation to mass production, working across R&D, quality and Samsung headquarters in South Korea.", "Recognised with the Best Practitioner, Most Outstanding Employee (Plating R&D) and Most Improved Process awards."],
   } as Record<string, string[]>,
+  snapshotTitle: "Product & Presales Manager, AIoT & Smart City Platforms",
+  profile: [
+    { who: "Aldar", what: "owned requirements and delivery across Aldar communities; created a reusable smart city blueprint." },
+    { who: "Disrupt-X", what: "promoted to Product Manager in 6 months; turned customer feedback into IoT platform requirements." },
+    { who: "Terminus", what: "vendor side of the same Aldar smart city work; contributed to AIoT solution definition, proposals and POC framing." },
+    { who: "Samsung Electro-Mechanics", what: "promoted to Manager; coordinated testing and root cause analysis; received three awards." },
+  ],
+  employers: [
+    "Aldar, then technology vendor Terminus Group: Smart City Lead & Product Owner (2024 to 2026)",
+    "Disrupt-X: Product Manager (2023 to 2024)",
+    "Samsung: Product Development Manager (2020 to 2023)",
+  ],
+  gulf: [
+    "Aldar, Abu Dhabi: smart city, Nexus and parking work",
+    "Terminus: Miral and Dubai Municipality opportunities",
+    "Disrupt-X: IoT platform across UAE, Saudi Arabia and Oman",
+  ],
+  keyCreds: [
+    "MBA with Distinction, Philippine Christian University (2025)",
+    "BS Electronics Engineering, University of Batangas (2020)",
+    "Registered Electronics Engineer; Certified Scrum Product Owner",
+  ],
+  projects: [
+    { name: "Aldar Smart City Blueprint", what: "Created a reusable framework for use cases, requirements, vendor evaluation, scoring and impact; applied across existing and new community deployments." },
+    { name: "Project Nexus Command & Control Centre", what: "Reviewed technical site surveys for 80+ assets (building management, security, access control, CCTV, fire); prepared summaries for consultant requirements." },
+    { name: "Saadiyat and Mamsha smart parking", what: "Delivered smart parking across both districts." },
+    { name: "Disrupt-X Enterprise IoT platform", what: "Managed roadmap and backlog across environmental, fleet, smart parking and energy capabilities; turned operator feedback into requirements." },
+    { name: "Miral Smart Destination (Terminus POC framing)", what: "Supported requirements and solution definition across smart destination use cases; helped prioritise the most feasible ideas and framed the POC validation path and success criteria." },
+    { name: "Dubai Municipality wastewater (Terminus)", what: "Led requirements and solution framing for municipal infrastructure visibility and intelligent operations." },
+    { name: "Disrupt-X connected platform delivery", what: "Managed engineering, QA, partners and customers through integration, testing and UAT across sensors, gateways, LoRaWAN, NB-IoT, APIs and dashboards." },
+  ],
   strengths: [
     { group: "Product Strategy and Ownership", items: ["Product Discovery", "Roadmaps", "PRDs", "Backlog Management", "Agile Delivery", "Stakeholder Management"] },
     { group: "AI and Connected Platforms", items: ["AI Products", "LLM Applications", "AI Agents", "IoT", "AIoT", "Smart Cities", "Digital Twins"] },
