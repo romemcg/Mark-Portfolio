@@ -167,3 +167,8 @@ html { overflow-x: clip; }
 .rv-note { margin-top: .5rem; font-size: .78rem; line-height: 1.45; color: rgb(var(--soft)); }
 
 html { scroll-padding-top: 5.5rem; }
+
+.rv-impact-m { display: block; }
+.rv-impact-d { display: none; }
+@media (max-width: 899px) { .rv-cols { display: flex; flex-direction: column; } .rv-impact-m { order: 1; } .rv-right { order: 2; } .rv-left { order: 3; } }
+@media (min-width: 900px) { .rv-impact-m { display: none; } .rv-impact-d { display: block; } }

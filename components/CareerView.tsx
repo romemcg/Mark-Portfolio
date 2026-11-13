@@ -30,6 +30,19 @@ export function CareerView() {
               </div>
             </header>
             <div className="rv-cols">
+              <div className="rv-impact-m">
+                <h4 className="rv-sec">Selected business impact</h4>
+                <div className="grid grid-cols-2 gap-3">
+                  {recruiter.impact.map((o) => (
+                    <div key={o.label} className="rv-stat card rounded-2xl p-3">
+                      <p className="rv-num">{o.value}</p>
+                      <p className="mt-2 text-xs leading-snug">{o.label}</p>
+                      <p className="mt-1.5 text-[.65rem] font-semibold uppercase tracking-[.12em] text-soft">{o.where}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-3 text-xs leading-relaxed text-soft">{recruiter.impactNote}</p>
+              </div>
               <div className="rv-left">
                 <h4 className="rv-sec">Profile summary</h4>
                 <ul className="rv-list">{recruiter.profile.map((p) => <li key={p.who}><b>{p.who}:</b> {p.what}</li>)}</ul>
@@ -53,7 +66,7 @@ export function CareerView() {
             </div>
           </section>
 
-          <section aria-labelledby="rv-impact">
+          <section aria-labelledby="rv-impact" className="rv-impact-d">
             <h2 id="rv-impact" className="sr-only">Selected business impact</h2>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
               {recruiter.impact.map((o) => (
