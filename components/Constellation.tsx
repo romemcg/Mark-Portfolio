@@ -34,7 +34,7 @@ export function Constellation() {
             const dy = !left && !right ? (p.y < CY ? -18 : 28) : 5;
             return (
               <g key={c.id} role="button" tabIndex={0} aria-pressed={on} aria-label={c.name} onClick={() => setActive(c.id)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setActive(c.id); } }} style={{ cursor: "pointer" }}>
-                <motion.circle cx={p.x} cy={p.y} r={on ? 13 : linked ? 10 : 8} fill={on ? "rgb(var(--accent))" : "rgb(var(--bg))"} stroke="rgb(var(--accent))" strokeWidth={2.5} animate={{ r: on ? 13 : linked ? 10 : 8 }} whileHover={{ scale: 1.25 }} style={{ transformBox: "fill-box", transformOrigin: "center" }} />
+                <motion.circle cx={p.x} cy={p.y} initial={false} fill={on ? "rgb(var(--accent))" : "rgb(var(--bg))"} stroke="rgb(var(--accent))" strokeWidth={2.5} animate={{ r: on ? 13 : linked ? 10 : 8 }} whileHover={{ scale: 1.25 }} style={{ transformBox: "fill-box", transformOrigin: "center" }} />
                 <text x={p.x + dx} y={p.y + dy} textAnchor={anchor} fontSize="14" fontWeight={on ? 700 : 500} fill="rgb(var(--ink))">{SHORT[c.id]}</text>
               </g>
             );
