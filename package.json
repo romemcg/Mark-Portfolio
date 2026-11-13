@@ -10,8 +10,8 @@
   "dependencies": {
     "motion": "11.18.2",
     "next": "15.5.29",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.0.1",
+    "react-dom": "19.0.1",
     "simple-icons": "^14.15.0",
     "three": "0.170.0"
   },
