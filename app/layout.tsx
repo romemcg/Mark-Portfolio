@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     jobTitle: "Technical Product Manager, AIoT and Smart City Platforms", knowsAbout: ["AI product management", "Large language models", "AI agents", "AIoT", "Digital twins", "Smart cities", "IoT"],
   };
   return (
-    <html lang="en" data-theme="dark" style={{ colorScheme: "dark", backgroundColor: "#070E1C" }} suppressHydrationWarning>
+    <html lang="en" data-theme="dark" style={{ colorScheme: "dark" }} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
