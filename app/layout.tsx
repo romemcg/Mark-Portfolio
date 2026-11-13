@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   openGraph: { title: site.seoName, description: site.tagline, siteName: site.seoName, type: "website", images: [{ url: `${site.url}/img/og-cover.jpg`, width: 1200, height: 630, alt: "Mark Jerome Gomez, technical product manager" }] },
   twitter: { card: "summary_large_image", title: site.seoName, description: site.tagline, images: [`${site.url}/img/og-cover.jpg`] },
   alternates: { canonical: "/" },
+  // The site is already dark. Stops Brave Night Mode (Dark Reader) re-theming it: grey page, dark logo tiles, unreadable text.
+  other: { "darkreader-lock": "", "color-scheme": "dark" },
 };
 export const viewport: Viewport = { themeColor: "#070E1C", colorScheme: "dark" };
 
