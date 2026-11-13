@@ -7,7 +7,7 @@ One path, no exceptions:
 - GitHub (`romemcg/Mark-Portfolio`) holds the complete Next.js source and is the single source of truth.
 - `main` is the only production branch. Vercel builds it (`next build`, static export to `out/`) and serves it at https://markgomez.vercel.app.
 - Every other branch becomes a Vercel Preview only. Previews never touch the production domain.
-- There is no separate "built output" branch and no second site. `mark-gomez.vercel.app` only redirects to the official domain (see `vercel.json`).
+- There is no separate "built output" branch and no second site. https://markgomez.vercel.app is the only domain; no other domain or redirect is configured.
 
 ## For every change
 
