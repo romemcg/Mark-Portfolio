@@ -17,6 +17,9 @@
 html { scroll-behavior: smooth; background: rgb(7 14 28); }
 /* Touch reveal (digital twin mask): pointer events keep flowing for horizontal and diagonal drags while vertical scrolling and pinch-zoom stay with the browser. No preventDefault anywhere. */
 html { touch-action: pan-y pinch-zoom; }
+/* Navy base layer beneath the fixed -z-10 canvases. iOS Safari/Brave does not reliably paint the root background behind a transparent body, which showed neutral gray on iPad. */
+body::before { content: ""; position: fixed; inset: 0; z-index: -20; background: rgb(7 14 28); pointer-events: none; }
+:root { background-color: rgb(7 14 28); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { background: transparent; /* html paints the page colour; an opaque body would cover the fixed -z-10 dot and 3D reveal canvases */ color: rgb(var(--ink)); font-family: "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; }
 ::selection { background: rgb(var(--accent) / .35); }
