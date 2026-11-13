@@ -25,7 +25,7 @@ export function CareerView() {
               <div className="rv-photo"><Image src="/img/mark-card.webp" alt={`Portrait of ${recruiter.name}`} width={160} height={160} className="h-full w-full rounded-full object-cover" /></div>
               <div className="rv-title">
                 <h3 className="display text-3xl text-accent md:text-5xl">{recruiter.name}</h3>
-                <p className="mt-2 text-base md:text-2xl">{recruiter.snapshotTitle}</p>
+                <p className="mt-2 text-base md:text-2xl">{recruiter.headline}</p>
                 <p className="mt-2 text-xs font-semibold tracking-wide text-soft md:text-sm">{recruiter.domains}</p>
               </div>
             </header>
@@ -37,6 +37,7 @@ export function CareerView() {
                 <ul className="rv-list">{recruiter.keyCreds.map((t) => <li key={t}>{t}</li>)}</ul>
                 <h4 className="rv-sec">Former employers and experience</h4>
                 <ul className="rv-list">{recruiter.employers.map((t) => <li key={t}>{t}</li>)}</ul>
+                <p className="rv-note">{recruiter.independent}</p>
                 <h4 className="rv-sec">Experience working in UAE and KSA</h4>
                 <ul className="rv-list">{recruiter.gulf.map((t) => <li key={t}>{t}</li>)}</ul>
               </div>
@@ -44,7 +45,7 @@ export function CareerView() {
                 <h4 className="rv-sec">Selected projects</h4>
                 <div>{recruiter.projects.map((p) => (
                   <article key={p.name} className="rv-bar">
-                    <h5>{p.name}</h5>
+                    <h5>{p.name} <span className="rv-meta">{p.org} · {p.status}</span></h5>
                     <p>{p.what}</p>
                   </article>
                 ))}</div>

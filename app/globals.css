@@ -148,7 +148,7 @@ body { background: rgb(var(--bg)); color: rgb(var(--ink)); font-family: "DM Sans
 .rv-title { flex: 1 1 280px; min-width: 0; }
 @media (min-width: 900px) { .rv-title { text-align: right; } }
 .rv-cols { display: grid; gap: 28px; padding-top: 22px; }
-@media (min-width: 900px) { .rv-cols { grid-template-columns: 1fr 1.25fr; gap: 0; } .rv-right { border-left: 1px solid rgb(var(--line) / .16); padding-left: 32px; } .rv-left { padding-right: 32px; } }
+@media (min-width: 900px) { .rv-cols { grid-template-columns: minmax(0,.62fr) minmax(0,1fr); gap: 0; } .rv-right { border-left: 1px solid rgb(var(--line) / .16); padding-left: 32px; } .rv-left { padding-right: 32px; } }
 .rv-sec { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; color: rgb(var(--accent)); margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid rgb(var(--line) / .14); }
 .rv-sec::before { content: ""; width: 9px; height: 9px; background: rgb(var(--accent)); flex: none; }
 .rv-left .rv-sec:not(:first-child) { margin-top: 22px; }
@@ -162,3 +162,8 @@ body { background: rgb(var(--bg)); color: rgb(var(--ink)); font-family: "DM Sans
 .rv-more > summary { list-style: none; } .rv-more > summary::-webkit-details-marker { display: none; }
 .rv-more > summary::after { content: " +"; color: rgb(var(--accent)); } .rv-more[open] > summary::after { content: " −"; }
 html { overflow-x: clip; }
+
+.rv-meta { display: inline-block; margin-left: .5rem; font-family: "DM Sans", system-ui, sans-serif; font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgb(var(--accent)); }
+.rv-note { margin-top: .5rem; font-size: .78rem; line-height: 1.45; color: rgb(var(--soft)); }
+
+html { scroll-padding-top: 5.5rem; }

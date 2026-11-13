@@ -16,7 +16,7 @@ export function Nav() {
   const path = usePathname() || "/";
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 bg-bg/80 backdrop-blur-md">
+    <header className={`z-50 ${path.startsWith("/career") ? "relative bg-bg" : "sticky top-0 bg-bg/80 backdrop-blur-md"}`}>
       <div className="wrap flex h-16 items-center justify-between">
         <Wordmark onClick={() => setOpen(false)} />
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
