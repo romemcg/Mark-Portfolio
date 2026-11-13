@@ -37,6 +37,11 @@ export type RevealController = {
   dispose(): void;
 };
 
+// The one live mask. TechBackground owns the controller (pointer listeners, easing, step()); other layers, such as the
+// case study building, read its state instead of adding a second mask. null while no controller exists (reduced motion).
+let active: RevealController | null = null;
+export const getActiveReveal = (): RevealController | null => active;
+
 export function createReveal(opts: { onActivate?: () => void } = {}): RevealController {
   const m: RevealState = { x: OFF, y: OFF, tx: OFF, ty: OFF, touch: false, k: 1, leaving: false };
   const isOn = () => m.x > -999;
@@ -56,7 +61,7 @@ export function createReveal(opts: { onActivate?: () => void } = {}): RevealCont
   document.addEventListener("pointerleave", leave);
   window.addEventListener("blur", leave);
 
-  return {
+  const controller: RevealController = {
     state: m,
     isOn,
     step() {
@@ -68,6 +73,9 @@ export function createReveal(opts: { onActivate?: () => void } = {}): RevealCont
       window.removeEventListener("pointerdown", move);
       document.removeEventListener("pointerleave", leave);
       window.removeEventListener("blur", leave);
+      if (active === controller) active = null;
     },
   };
+  active = controller;
+  return controller;
 }
