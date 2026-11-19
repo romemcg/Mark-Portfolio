@@ -2,6 +2,7 @@ import { TechIcon, hasIcon } from "./Icons";
 
 const hues = [["#2563EB", "#38BDF8"], ["#4F46E5", "#60A5FA"], ["#0284C7", "#22D3EE"], ["#1D4ED8", "#818CF8"], ["#0891B2", "#3B82F6"], ["#1E3A8A", "#0EA5E9"]];
 const glyph: Record<string, string> = {
+  likaro: '<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 12l9-5M12 12v10M12 12L3 7"/><circle cx="12" cy="12" r="1.5"/>',
   "personal-ai-learning-studio": '<path d="M3 4h7l2 2 2-2h7v15h-7l-2 2-2-2H3zM12 6v15M6 8h3M6 11h3"/><path d="M16 9l3 2-3 2z"/>',
   "smart-city-intelligence-hub": '<circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M10 10.5L6.5 7.5M14 10.5l3.5-3M10 13.5l-3.5 3M14 13.5l3.5 3"/>',
   "life-os": '<path d="M3 20h5v-5h5v-5h5V5h3"/><circle cx="18" cy="5" r="1.2"/>',
@@ -23,6 +24,7 @@ const glyph: Record<string, string> = {
   "disrupt-x-marketplace": '<path d="M4 9l1-5h14l1 5M4 9h16v11H4zM9 20v-6h6v6"/>',
 };
 const covers: Record<string, string> = {
+  likaro: "/img/projects/likaro-landing.webp",
   "arte-creative-hub": "/img/projects/arte-cover.webp",
   "smart-city-intelligence-hub": "/img/projects/hub-home.webp",
   "life-os": "/img/projects/lifeos-dashboard.webp",

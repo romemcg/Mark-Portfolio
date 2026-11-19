@@ -187,6 +187,54 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "likaro",
+    name: "LIKARO",
+    status: "In Development",
+    type: "Personal",
+    period: "Nov 2026 to present",
+    blurb: "An immersive 3D studio where you learn digital twins and connected technology by playing: place a sensor in a tower, connect it, break it, and watch what the twin does.",
+    tech: ["React Three Fiber", "Three.js", "Next.js", "TypeScript", "Zustand", "Vitest", "Playwright"],
+    problem: "Digital twins and IoT are explained with slides and diagrams, so beginners memorise terms without ever seeing a sensor reading travel from a room to a dashboard. Enterprise simulators exist, but they feel like software, not something you want to explore.",
+    users: "Beginners and career changers learning smart building technology, plus engineers and clients who want to test a design before it is built.",
+    role: "Product owner, designer and builder. I define the learning journeys, the rules each device must obey, and the quality bar, and I build with AI assisted development.",
+    features: [
+      "Playground: explore Distrito Likha, a fictional Philippine smart city district, and walk into Likha Tower from the lobby to the rooftop plant.",
+      "Guided missions: short, hands on tasks such as Make the Meeting Room Smart, where you mount a sensor, pair a gateway and watch the reading arrive in the digital twin.",
+      "Lab: design and break systems. Inject faults, see what the building does, and decide how to respond.",
+      "Mind: deterministic guidance that explains what happened and why, in plain language.",
+      "Free exploration and an engineering sandbox for building your own setups.",
+    ],
+    approach: [
+      "Explore, design, decide. Every mission follows the same loop, so the ideas transfer from one building to the next.",
+      "One shared model sits under everything. Devices, connections, faults, costs and the dashboards all read from the same state, so nothing on screen is decorative.",
+      "Game first teaching. Short missions with real consequences replace a long tutorial, and the physical world, the digital twin layer and the interface stay visibly separate.",
+    ],
+    decisions: [
+      "A physical placement rule for every device family. A sensor cannot float in mid air or sit behind a wall, and a rejected placement explains why.",
+      "A fictional district, not a real one. Distrito Likha is inspired by Bonifacio Global City but uses no real buildings or names, so the world can be designed for learning.",
+      "Stylised realism for adults, not a cartoon. Navy and electric blue belong to the interface and brand, not to every object.",
+      "Reuse before buying. Only free or already licensed 3D assets are used, with an in app credits page.",
+    ],
+    challenges: [
+      "Making the simulation believable without pretending to be a solver. The models are teaching models with documented assumptions and invariant tests that keep battery, tank and power values inside physical bounds.",
+      "Keeping the world honest. Visual quality is only accepted from real browser screenshots, not from passing tests.",
+      "Frame rate. The district scene with live devices, zones and crowds is benchmarked in Chrome on an M2 Mac.",
+    ],
+    results: [
+      "17 use cases and 6 operations cases on shared building and district models, grouped into two learning paths.",
+      "252 unit tests and 27 browser tests pass, and the district scene holds roughly 55 frames per second in Chrome on an M2 Mac.",
+      "No outside tester has used it yet. Phone layouts are checked at phone size in desktop Chrome, not on a device.",
+    ],
+    roadmap: ["Put it in front of first time learners and watch where they get stuck", "Cover more of the district beyond Likha Tower", "Publish a playable demo"],
+    flow: ["Explore", "Place a sensor", "Connect it", "Watch the data", "Break it", "Decide"],
+    gallery: [
+      { src: "/img/projects/likaro-landing.webp", alt: "LIKARO landing screen over Likha Tower with the three ways to start", caption: "Start Learning, Explore Freely or open the Engineering Sandbox." },
+      { src: "/img/projects/likaro-twin.webp", alt: "Mission screen showing a meeting room sensor reading linked to the digital twin floor plan", caption: "Mission step: the reading now belongs to the Meeting Room in the twin." },
+      { src: "/img/projects/likaro-storm.webp", alt: "Storm scenario on the avenue with a flooded road and decision panel", caption: "Rain on the avenue: drainage, a basin pump and a power cut interact." },
+      { src: "/img/projects/likaro-ev.webp", alt: "Car park EV charging scenario with a supply limit", caption: "Charge the fleet without tripping the supply." },
+    ],
+  },
+  {
     slug: "smart-city-intelligence-hub",
     name: "Smart City Intelligence Hub",
     status: "In Development",
