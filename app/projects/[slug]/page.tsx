@@ -9,6 +9,7 @@ import { TechIcon } from "@/components/Icons";
 import { FlowDiagram } from "@/components/FlowDiagram";
 import { PrdSections } from "@/components/PrdSections";
 import { prds } from "@/content/prd";
+import { LikaroPlayground, LikaroStats } from "@/components/LikaroPlayground";
 
 export function generateStaticParams() { return projects.map((p) => ({ slug: p.slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -63,6 +64,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           ))}
         </div>
       )}
+      {p.slug === "likaro" && <><LikaroPlayground /><LikaroStats /></>}
       <div className="mt-8 max-w-3xl">
         {p.flow && <Block title="The flow"><div className="not-prose"><FlowDiagram steps={p.flow} /></div></Block>}
         {p.problem && <Block title="The problem"><p>{p.problem}</p></Block>}
